@@ -16,7 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     DateTime now = DateTime.now();
-    String formattedDate = DateFormat('MMMM dd, yyyy').format(now); // Menambahkan Nama Bulan, Tanggal, dan Tahun
+    String formattedDate = DateFormat('MMMM dd, yyyy')
+        .format(now); // Menambahkan Nama Bulan, Tanggal, dan Tahun
     String dayOfWeek = DateFormat('EEEE').format(now);
 
     return Scaffold(
@@ -112,7 +113,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           text: TextSpan(
                             children: [
                               TextSpan(
-                                text: "${provider.modelCuaca.main?.tempMin?.toStringAsFixed(0)}°c",
+                                text:
+                                    "${provider.modelCuaca.main?.tempMin?.toStringAsFixed(0)}°c",
                                 style: const TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
@@ -128,7 +130,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                               TextSpan(
-                                text: "${provider.modelCuaca.main?.tempMax?.toStringAsFixed(0)}°c",
+                                text:
+                                    "${provider.modelCuaca.main?.tempMax?.toStringAsFixed(0)}°c",
                                 style: const TextStyle(
                                   fontSize: 24,
                                   fontWeight: FontWeight.bold,
